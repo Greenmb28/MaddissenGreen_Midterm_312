@@ -1,0 +1,253 @@
+@body_background_color: #e0cdb8;
+@navbar_background_color:rgb(87, 49, 0);
+@cardback_background_color:rgb(238, 185, 248);
+
+body
+{
+    background-color:lighten(@body_background_color, 10%);
+   
+}
+#nav
+{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border: 2px solid #350b0b;
+    background-color: #f5f4f4;
+    text-align: center;
+    font-size: x-large;
+    height: 8%;
+    width:100%;
+    padding: 0;
+    margin: 0;
+    top: 0px;
+    left: 0px;
+}
+article
+{
+   
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #918888;
+    text-align: center;
+    font-size: x-large; 
+}
+header
+{
+    position: relative;
+    text-align: left;
+    left:-300px;
+    top: 5px;
+
+    
+}
+#navbar
+{
+display: none;
+position: absolute;
+  top:40px;
+  left: 0px;
+   z-index: 1000;
+    width:  0%;
+    height: 100px;
+    border:1px;
+    padding: 1px;
+    font-size: large;
+     text-align: center;
+     transform: translateY(0%);
+  transition: transform 0.1s ease;
+  
+  
+}
+#navbar:target {
+
+ display: block;
+  transform: translateY(0%);
+transition: transform 0.1s ease;
+}
+#navbar>ul{
+    list-style-type: none;
+    padding: 0;
+    margin:0;
+    width:100%;
+    
+}
+
+#navbar> ul a {
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: large;
+    padding: 2px;
+    color:rgb(7, 7, 7);
+    display: block;
+}
+
+#navbar >ul a :hover
+{color: rgb(187, 184, 184);
+background-color: aqua;}
+
+.h1
+{
+   position:absolute;
+    width: 100%;
+    height: auto;
+    background-color: rgb(34, 36, 37);
+   text-align: center;
+}
+
+.cards 
+{
+    position: relative;
+  flex-wrap: wrap;
+  display: flex;
+  height: 50px;
+  text-align: center;
+  top:150px;
+  color:#350b0b;
+  padding: 0 30px;
+  flex-direction: row;
+  gap:300px;
+  width: 90%;
+  
+    
+}
+.card 
+{
+
+  background: rgb(49, 0, 0);
+
+  margin-bottom: 2em;
+
+  margin-top: 2em;
+
+  max-height: 300px;
+
+  flex: 1 1 200px;
+
+  position: relative; 
+
+}
+.card-content
+{
+    position: absolute;
+    top: 10px;
+    text-align: center;
+    right: 20%;
+    display: flex;
+    align-items: flex-start;
+    padding: 1.4em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+   
+}
+.pixHolder {
+
+  text-align: center;
+    
+}
+
+
+
+.pixHolder img {
+
+  width: 100%;
+  height: 250px;
+  
+}
+.flip-card
+{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: transparent;
+  list-style: none;
+  margin: 0;
+  perspective: 1000px;
+  
+ 
+}
+.flip-card-inner {
+  position: absolute;
+  width:fit-content;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  
+ 
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  
+}
+
+.flip-card-front{
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+ 
+  
+}
+
+.flip-card-button
+{
+  position: relative;
+  background-color: transparent;
+  width: fit-content;
+  perspective: 400px;
+  font-size: x-small;
+  height:70px;
+  left: 100px;
+  
+}
+
+.flip-card-back
+{
+    backface-visibility: hidden;
+  height:230px;
+  background-color:lighten(@cardback_background_color, 1%);
+  border: 3px solid #350b0b;
+   color:rgb(73, 73, 73);
+  transform: rotateY(180deg);
+  text-align: left;
+  font-size: small;
+  width: 300px;
+  padding: 10px;;
+  text-decoration: none;
+}
+ul
+{list-style-type: none;}
+
+h4
+{
+  position: relative;
+    color:#350b0b;
+    font-size: medium;
+    text-align: center;
+    
+}
+h3
+{
+  position: absolute;
+    color:#184b37;
+    font-size: medium;
+    text-align: center;
+    bottom:65px;
+    left: -100px;
+}
+footer{
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #918888;
+    text-align: center;
+    font-size: x-large; 
+    bottom: -318px;
+    width: 100%;
+    border: 2px solid #350b0b;
+    background-color: #f5f4f4;
+}
